@@ -8,45 +8,47 @@
   
   <title>Frontend Mentor | Newsletter sign-up form with success message</title>
 
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 0.6875rem; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
+  <link rel="stylesheet" href="styles.css">
+
+  <script src="script.js" defer></script>
 </head>
 <body>
+  <main>
+    <section class="section__signup">
+      <picture>
+        <source media="(min-width: 64em)" srcset="assets/images/illustration-sign-up-desktop.svg">
+        <source media="(min-width: 48em)" srcset="assets/images/illustration-sign-up-tablet.svg">
+        <img src="assets/images/illustration-sign-up-mobile.svg" class="section__signup-img" alt="">
+      </picture>
+      <div class="section__signup-text">
+        <h2>Stay updated!</h2>
+        <p>Join 60,000+ product managers receiving monthly updates on:</p>
+        <ul>
+          <li>Product discovery and building what matters</li>
+          <li>Measuring to ensure updates are a success</li>
+          <li>And much more!</li>
+        </ul>
+        <form action="/" method="POST" id="newsletter-form" novalidate>
+          <div class="form-header">
+            <label for="email">Email address</label>
+            <span class="error-message" id="error-message">Valid email required</span>
+          </div>
 
-  <!-- Sign-up form start -->
+          <input type="email" id="email" name="email" placeholder="email@company.com" required><br>
+          <button type="submit">Subscribe to monthly newsletter</button>
+        </form>
+      </div>
+    </section>
 
-  Stay updated!
-
-  Join 60,000+ product managers receiving monthly updates on:
-
-  Product discovery and building what matters
-  Measuring to ensure updates are a success
-  And much more!
-
-  Email address
-  email@company.com
-
-  Subscribe to monthly newsletter
-
-  <!-- Sign-up form end -->
-
-  <!-- Success message start -->
-
-  Thanks for subscribing!
-
-  A confirmation email has been sent to ash@loremcompany.com. 
-  Please open it and click the button inside to confirm your subscription.
-
-  Dismiss message
-
-  <!-- Success message end -->
-  
-  <footer class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
-  </footer>
+    <section class="section__modal-success">
+      <div class="section__modal-success-wrapper">
+        <svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 64 64"><defs><linearGradient id="a" x1="100%" x2="0%" y1="0%" y2="100%"><stop offset="0%" stop-color="#FF6A3A"/><stop offset="100%" stop-color="#FF527B"/></linearGradient></defs><g fill="none"><circle cx="32" cy="32" r="32" fill="url(#a)"/><path stroke="#FFF" stroke-width="4" d="m18.286 34.686 8.334 7.98 19.094-18.285"/></g></svg>
+        <h2>Thanks for subscribing!</h2>
+        <p>A confirmation email has been sent to <span id="user-email-placeholder">ash@loremcompany.com</span>. Please open it and click the button inside to confirm your subscription</p>
+      </div>
+    
+      <button id="dismiss-btn">Dismiss message</button>
+    </section>
+  </main>
 </body>
 </html>
