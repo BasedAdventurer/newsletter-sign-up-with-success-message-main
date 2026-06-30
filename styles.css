@@ -121,6 +121,10 @@ ul li { list-style: none; }
     }
 }
 
+/* -------------------------------- */
+/*          EMAIL FORM              */
+/* -------------------------------- */
+
 form {
     display: flex;
     flex-direction: column;

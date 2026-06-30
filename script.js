@@ -44,6 +44,6 @@ document.addEventListener("DOMContentLoaded", () => {
         form.reset();
         successSection.style.display = "none";
         signupSection.style.display = "flex";
-    })
+    });
 });
 
